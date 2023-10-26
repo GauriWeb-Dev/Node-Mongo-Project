@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "module": "commonjs",
+      "allowJs": true,
+      "target": "es6",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "sourceMap": true,
+      "declaration": true,
+      "skipLibCheck": true,
+      "outDir": "build",
+      "esModuleInterop": true,
+      "strict": false,
+      "lib": [
+        "es2017"
+      ],
+    },
+ 
+    "exclude": [
+      "node_modules"
+    ]
+  }
