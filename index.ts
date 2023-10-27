@@ -1,11 +1,9 @@
 import express from "express";
 const app = express();
-//import connectDatabase from "./src/database/db";
 import cors from "cors";
 import * as dotenv from "dotenv";
 import connectDatabase from "./src/database/db";
-//import router from "./src/routes/routes";
-//import errorHandler from "./src/middleware/globalErrorHandler";
+import router from "./src/routes/routes";
 
 dotenv.config();
 
@@ -13,7 +11,7 @@ const port = process.env.PORT;
 
 app.use(
 	cors({
-		exposedHeaders: ["etk"],
+		exposedHeaders: [''],
 	})
 );
 
@@ -28,7 +26,7 @@ app.use("", async (req, res, next) => {
 	next();
 });
 
-// app.use(router);
+app.use(router);
 
 app.use((req, res, next) => {
 	return res.status(404).json({
