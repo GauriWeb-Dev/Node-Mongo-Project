@@ -6,6 +6,7 @@ node_modules
 # Builds
 .build
 build
+.env
 
 .vscode
 
