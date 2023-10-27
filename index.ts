@@ -11,7 +11,7 @@ const port = process.env.PORT;
 
 app.use(
 	cors({
-		exposedHeaders: [''],
+		exposedHeaders: ['etk'],
 	})
 );
 

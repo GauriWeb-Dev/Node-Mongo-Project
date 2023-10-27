@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 const router = Router();
 import mongoose from "mongoose";
 import testRoute from "./test.routes";
+import userRouter from "./user.routes";
 
 router.get("/test", (req: Request, res: Response) =>
 	res.send({ status: "success" })
@@ -26,5 +27,6 @@ router.get("/path", async (req, res, next) => {
 	});
 });
 router.use("/test", testRoute);
+router.use('/users',userRouter)
 
 export default router;
